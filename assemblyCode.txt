@@ -1,0 +1,21 @@
+Input prefix: +*AB/CD
+Reversed prefix: DC/BA*+
+
+Assembly Code: 
+PUSH D
+PUSH C
+POP R1             ; R1 = C
+POP R2             ; R2 = D
+DIV R1, R1, R2     ; R1 = R1 / R2
+PUSH R1
+PUSH B
+PUSH A
+POP R1             ; R1 = A
+POP R2             ; R2 = B
+MPY R1, R1, R2     ; R1 = R1 * R2
+PUSH R1
+POP R1             ; R1 = (A*B)
+POP R2             ; R2 = (C/D)
+ADD R1, R1, R2     ; R1 = R1 + R2
+PUSH R1
+POP Result         ; Result = ((A*B)+(C/D))
