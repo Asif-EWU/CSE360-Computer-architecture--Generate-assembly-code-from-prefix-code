@@ -3,7 +3,9 @@
 SAMPLE INPUTS:
 
 i.     (+(*AB)(/CD))
+
 ii.    *P+QRS
+
 iii.   *   W   +   X  / Y   Z
 
 
